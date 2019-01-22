@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>readme.html</title>
+<link rel="stylesheet" type="text/css" media="all" href="/Users/oracleyue/.emacs.d/templates/css/bootstrap.min.css"  />
+<link rel="stylesheet" type="text/css" media="all" href="/Users/oracleyue/.emacs.d/templates/css/style.md.css"  />
+</head>
+
+<body>
+
+<h1 id="folderdescriptions">Folder Descriptions</h1>
+
+<h2 id="testdatasets">Test Datasets</h2>
+
+<p>The data sets are simulation of dynet in the form of ARX. Here are two cases: one
+with different SNRs (i.e. <code>SNR</code>); the other with different #nodes (i.e. <code>p</code>).</p>
+
+<p><code>dataARX_snr</code>: simulation with different SNRs (SNR = 0, 10, 20, 40 dB) and p = 10.<br/>
+<code>dataARX_p</code>: simulation with different #nodes (p = 5, 10, 15, 20) and SNR = 10 dB.</p>
+
+<h2 id="test1">Test 1</h2>
+
+<p>This test uses groupSBL to run network inference on 50 datasets. </p>
+
+<p><code>resARX_gsbl_p</code>: the multiple tests with 50 datasets, 10 nodes (p = 10, m = 1); using groupSBL with 1e&#8211;3 for PruneGamma.</p>
+
+<p><code>resARX_gsbl_snr</code>: the multiple tests with 50 datasets, SNR = 10 dB; using groupSBL with 1e&#8211;3 for PruneGamma.</p>
+
+<p>List of included folders:</p>
+
+<ul>
+<li><code>dataARX_p</code></li>
+<li><code>dataARX_snr</code></li>
+<li><code>resARX_gsbl_p</code></li>
+<li><code>resARX_gsbl_snr</code></li>
+</ul>
+
+<h2 id="test2">Test 2</h2>
+
+<p>This test uses group Iterative Reweighted L1 method to run network inference on 50 datasets, which are the same datasets used in Test 1.</p>
+
+<p><code>resARX_gil1_p</code>: the multiple tests with 50 datasets, 10 nodes (p = 10, m = 1) using groupIRL1; The different lambdas (regularization parameters) for p=5, 10, 15, 20 are lambda = 5e&#8211;2, 1e&#8211;1, 1e&#8211;1, 1e&#8211;1.</p>
+
+<p><code>resARX_gil1_snr</code>: the multiple tests with 50 datasets, SNR = 10 dB using groupIRL1. The different lambdas (regularization parameters) for SNR=0, 10, 20, 40 are lambda = 1e&#8211;1, 1e&#8211;1, 1e&#8211;2, 1e&#8211;3.</p>
+
+<p>List of included folders:</p>
+
+<ul>
+<li><code>dataARX_p</code></li>
+<li><code>dataARX_snr</code></li>
+<li><code>resARX_gil1_p</code></li>
+<li><code>resARX_gil1_snr</code></li>
+</ul>
+
+</body>
+</html>
